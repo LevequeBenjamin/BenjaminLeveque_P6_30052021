@@ -30,7 +30,7 @@ const getFantasyMovies = async () => {
 		return b.votes - a.votes;
 	});
 	fantasyMovies.length = 7;
-  console.log(fantasyMovies)
+	console.log(fantasyMovies);
 };
 
 showFantasyMovie = async () => {

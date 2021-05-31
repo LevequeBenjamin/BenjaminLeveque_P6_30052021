@@ -38,11 +38,10 @@ showBestAllMovie = async () => {
 	bestAllContainer.innerHTML = bestAllMovies.map(
 		bestAllMovie =>
 			`
-        <li class="bestMovie-item">
-          <img class="bestMovie-img" src="${bestAllMovie.image_url}" />
-        </li>
-        
-        `,
+			<li class="bestMovie-item">
+				<img class="bestMovie-img" src="${bestAllMovie.image_url}" />
+			</li>
+			`,
 	);
 };
 
