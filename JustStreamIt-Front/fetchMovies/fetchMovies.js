@@ -17,11 +17,11 @@ class FetchMovies {
 	}
 
 	get_movies = async () => {
-		return await fetch(this.url)
+		await fetch(this.url)
 			.then(res => {
 				res.json().then(data => {
 					for (let movieFetch of data.results) {
-						this.movies.push(JSON.parse(movieFetch));
+						this.movies.push(movieFetch);
 					}
 				});
 			})
