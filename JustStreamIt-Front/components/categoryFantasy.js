@@ -2,48 +2,19 @@ const fantasyUrl =
 	'http://localhost:8000/api/v1/titles/?imdb_score_min=8.6&genre=Fantasy';
 const fantasyContainer = document.getElementById('category-fantasy-container');
 
-let fantasyMoviesFound;
-let fantasyMoviesFoundArr = [];
-let fantasyMovies;
+showFantasyMovies = async fantasyUrl => {
+	let fantasyMoviesArr = new Array();
+	fantasyMoviesFound = new FetchMovies(fantasyUrl);
+	await fantasyMoviesFound.getAllMovies();
 
-const fetchFantasyMovies = async fantasyUrl => {
-	fantasyMoviesFound = await fetch(fantasyUrl)
-		.then(res => res.json())
-		.catch(err => console.log(err));
-};
-
-const getFantasyMovies = async () => {
-	await fetchFantasyMovies(fantasyUrl);
-	for (movie of fantasyMoviesFound.results) {
-		fantasyMoviesFoundArr.push(movie);
+	for (fantasyMovieFound of fantasyMoviesFound.movies) {
+		fantasyMovieDetail = new FetchOneMovie(fantasyMovieFound.url);
+		await fantasyMovieDetail.getMovie();
+		movie = MovieConstructor.movieConstructor(fantasyMovieDetail.movieFound);
+		fantasyMoviesArr.push(movie);
 	}
-	if (fantasyMoviesFound.next) {
-		await fetchFantasyMovies(fantasyMoviesFound.next);
-		for (movie of fantasyMoviesFound.results) {
-			fantasyMoviesFoundArr.push(movie);
-		}
-	}
-	let moviesArr = Object.keys(fantasyMoviesFoundArr).map(
-		i => fantasyMoviesFoundArr[i],
-	);
-	fantasyMovies = moviesArr.sort((a, b) => {
-		return b.votes - a.votes;
-	});
-	fantasyMovies.length = 7;
-	console.log(fantasyMovies);
+
+	ShowMovies.showMovies(fantasyContainer, fantasyMoviesArr);
 };
 
-showFantasyMovie = async () => {
-	await getFantasyMovies();
-	fantasyContainer.innerHTML = fantasyMovies.map(
-		fantasyMovie =>
-			`
-        <li class="bestMovie-item">
-          <img class="bestMovie-img" src="${fantasyMovie.image_url}" />
-        </li>
-        
-        `,
-	);
-};
-
-showFantasyMovie();
+showFantasyMovies(fantasyUrl);

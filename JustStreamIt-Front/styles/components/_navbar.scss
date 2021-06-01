@@ -6,7 +6,7 @@
 	height: 100px;
 	z-index: 11;
 	top: 0;
-	background-color: $black;
+	background: linear-gradient(black, $black);
 
 	.nav-container {
 		display: flex;
