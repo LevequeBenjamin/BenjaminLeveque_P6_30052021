@@ -1,4 +1,9 @@
 class ComponentBestMovie {
+	/**
+	 *
+	 * @param {string} url the url of a movie category
+	 * @param {HTMLElement} container the url of the best movies
+	 */
 	static componentMovie = async (url, container) => {
 		let movieFound = new FetchMovies(url);
 		await movieFound.getBestMovie();
@@ -10,6 +15,11 @@ class ComponentBestMovie {
 }
 
 class ComponentCategoryMovies {
+	/**
+	 *
+	 * @param {string} url the url of a movie category
+	 * @param {HTMLElement} container
+	 */
 	static componentMovies = async (url, container) => {
 		let moviesArr = new Array();
 		let moviesFound = new FetchMovies(url);
@@ -18,9 +28,7 @@ class ComponentCategoryMovies {
 		for (let movieFound of moviesFound.movies) {
 			let movieDetail = new FetchOneMovie(movieFound.url);
 			await movieDetail.getMovie();
-			let movie = MovieConstructor.movieConstructor(
-				movieDetail.movieFound,
-			);
+			let movie = MovieConstructor.movieConstructor(movieDetail.movieFound);
 			moviesArr.push(movie);
 		}
 

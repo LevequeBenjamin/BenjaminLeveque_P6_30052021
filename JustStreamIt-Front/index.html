@@ -39,19 +39,74 @@
 		</header>
 		<main>
 			<section>
-				<div id="best-movie-container"></div>
-				<h2>Les plus gros succès sur JustStreamIt</h2>
-				<div id="best-allMovies-container" class="wrap"></div>
-				<h2>Films d'aventure</h2>
-				<div id="category-adventure-container" class="wrap"></div>
-				<h2>Films fantaisies</h2>
-				<div id="category-fantasy-container" class="wrap"></div>
-				<h2>Films mistères</h2>
-				<div id="category-mistery-container" class="wrap"></div>
+				<div class="bestMovieContainer categoryContainer">
+					<div id="bestMovie"></div>
+					<div id="btn-modal" class="button-info">
+						<i class="fas fa-info-circle"></i>
+						<p>Plus d'infos</p>
+					</div>
+				</div>
+				<div class="bestAllMoviesContainer categoryContainer">
+					<h2>Les plus gros succès sur JustStreamIt</h2>
+					<div id="bestAllMovies" class="wrap"></div>
+				</div>
+				<div class="categoryAdventureContainer categoryContainer">
+					<h2>Films d'aventure</h2>
+					<div id="categoryAdventure" class="wrap"></div>
+				</div>
+				<div class="categoryFantasyContainer categoryContainer">
+					<h2>Films fantaisies</h2>
+					<div id="categoryFantasy" class="wrap"></div>
+				</div>
+				<div class="categoryMisteryContainer categoryContainer">
+					<h2>Films mistères</h2>
+					<div id="categoryMistery" class="wrap"></div>
+				</div>
 			</section>
 		</main>
 		<!-- Footer -->
-		<footer></footer>
+		<footer>
+			<nav class="footer">
+				<div class="footer-container">
+					<h2>
+						JustStreamIt
+						<br />
+					</h2>
+					<p>Rejoignez nous sur :</p>
+					<div class="social">
+						<div class="social__mg">
+							<a
+								class="social dimI"
+								href="https://www.facebook.com/benjamin.lvq.1"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<i class="fab fa-facebook-f" aria-hidden="true"></i>
+							</a>
+						</div>
+						<div class="social__mg">
+							<a
+								class="social dimI"
+								href="https://twitter.com/LvqueBenjamin2"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								<i class="fab fa-twitter" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="copyright">
+						<p>
+							<i class="far fa-copyright"></i> 2021 developped by Benjamin
+							Lévêque
+						</p>
+					</div>
+					<a href="" class="mentions-legales">
+						<p>Mentions légales</p>
+					</a>
+				</div>
+			</nav>
+		</footer>
 	</body>
 	<!-- JS -->
 	<script src="fetchApi/fetchMovies.js"></script>
@@ -60,5 +115,4 @@
 	<script src="showMovies.js/showMovies.js"></script>
 	<script src="components/components.js"></script>
 	<script src="script.js"></script>
-	
 </html>

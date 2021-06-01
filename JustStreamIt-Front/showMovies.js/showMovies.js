@@ -1,22 +1,32 @@
 class ShowMovies {
+	/**
+	 *
+	 * @param {*} container
+	 * @param {*} moviesArr
+	 */
 	static showMovies(container, moviesArr) {
-		container.innerHTML = moviesArr.map(
-			movie =>
-				`
-            <li class="bestMovie-item">
+		container.innerHTML = moviesArr
+			.map(
+				movie =>
+					`
+            <div class="bestMovie-item">
               <img class="bestMovie-img" src="${movie.image_url}" />
-            </li>
-            
+            </div>  
             `,
-		);
+			)
+			.join('');
 	}
 
-  static showMovie(container, movie){
-    container.innerHTML = `
-        <li class="bestMovie-item">
+	/**
+	 *
+	 * @param {*} container
+	 * @param {*} movie
+	 */
+	static showMovie(container, movie) {
+		container.innerHTML = `
+        <div id="${movie.id}" class="bestMovie-item">
           <img class="bestMovie-img" src="${movie.image_url}" />
-        </li>
-        
+        </div>
         `;
-  }
+	}
 }

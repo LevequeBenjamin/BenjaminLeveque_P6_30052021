@@ -1,4 +1,20 @@
 class Movie {
+	/**
+	 *
+	 * @param {*} movie_id
+	 * @param {*} image_url
+	 * @param {*} title
+	 * @param {*} genres
+	 * @param {*} date_published
+	 * @param {*} rated
+	 * @param {*} imdb_score
+	 * @param {*} directors
+	 * @param {*} actors
+	 * @param {*} duration
+	 * @param {*} countries
+	 * @param {*} reviews_from_critics
+	 * @param {*} description
+	 */
 	constructor(
 		movie_id,
 		image_url,
@@ -31,6 +47,11 @@ class Movie {
 }
 
 class MovieConstructor {
+	/**
+	 *
+	 * @param {*} movieFound
+	 * @returns
+	 */
 	static movieConstructor(movieFound) {
 		let movie = new Movie(
 			movieFound.id,
@@ -50,4 +71,3 @@ class MovieConstructor {
 		return movie;
 	}
 }
-
