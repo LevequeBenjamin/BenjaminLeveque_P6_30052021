@@ -2,9 +2,9 @@ class Carousel {
 	/**
 	 *
 	 * @param {HTMLElement} element
-	 * @param {*} options
-	 * @param {*} options.slidesToScroll number of elements to be threaded
-	 * @param {*} options.slidesVisible number of elements visible in a slide
+	 * @param {Object} options
+	 * @param {Object} options.slidesToScroll number of elements to be threaded
+	 * @param {Object} options.slidesVisible number of elements visible in a slide
 	 */
 	constructor(element, options = {}) {
 		this.element = element;
@@ -16,7 +16,12 @@ class Carousel {
 			},
 			options,
 		);
+		let root = document.createElement('div');
+		root.setAttribute('class', 'carousel');
+		this.element.appendChild(root);
 	}
+
+	createDivWithClass(className) {}
 }
 
 document.addEventListener('DOMContentLoaded', function () {

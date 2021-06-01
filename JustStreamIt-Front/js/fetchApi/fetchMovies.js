@@ -1,27 +1,44 @@
+/**
+ *
+ */
 class FetchMovies {
+	/**
+	 *
+	 * @param {*} url
+	 */
 	constructor(url) {
 		this.moviesFound;
 		this.url = url;
 		this.movies = new Array();
 	}
 
+	/**
+	 *
+	 * @param {*} url
+	 */
 	fetchAllMovies = async url => {
 		this.moviesFound = await fetch(url)
 			.then(res => res.json())
 			.catch(err => console.log(err));
 	};
 
-  getBestMovie = async () => {
-    await this.fetchAllMovies(this.url);
-    let moviesArr = Object.keys(this.moviesFound.results).map(
-      i => this.moviesFound.results[i],
-    );
-    this.movies = moviesArr.sort((a, b) => {
-      return b.votes - a.votes;
-    });
-    this.movies.length = 1;
-  };
+	/**
+	 *
+	 */
+	getBestMovie = async () => {
+		await this.fetchAllMovies(this.url);
+		let moviesArr = Object.keys(this.moviesFound.results).map(
+			i => this.moviesFound.results[i],
+		);
+		this.movies = moviesArr.sort((a, b) => {
+			return b.votes - a.votes;
+		});
+		this.movies.length = 1;
+	};
 
+	/**
+	 *
+	 */
 	getAllMovies = async () => {
 		await this.fetchAllMovies(this.url);
 		for (let movie of this.moviesFound.results) {
