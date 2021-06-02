@@ -27,6 +27,7 @@
 	}
 	.movie-item {
 		.movie-img {
+			width: 100%;
 			transition: 0.15s;
 			cursor: pointer;
 			&:hover {

@@ -63,5 +63,11 @@ class ComponentCategoryMovies {
 		}
 
 		ShowMovies.showMovies(container, moviesArr);
+		//let carousel = document.getElementById(container);
+		new Carousel(container, {
+			slideToScroll: 1,
+			slidesVisible: 4,
+		});
+	
 	};
 }

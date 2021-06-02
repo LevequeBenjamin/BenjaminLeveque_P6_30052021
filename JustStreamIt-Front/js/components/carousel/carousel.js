@@ -9,20 +9,18 @@ class Carousel {
 			},
 			options,
 		);
-		this.children = this.element.children;
-		//let ratio = this.children.length / this.options.slidesVisible
-		
-		//this.element.style.width = (ratio * 100) + "%" 
-		console.log(this.children)
-		console.log(this.children.length)
-		
+		this.children = [].slice.call(this.element.children);
+		this.setStyle();
+	}
+
+	setStyle() {
+		let ratio = this.children.length / this.options.slidesVisible;
+		this.element.style.width = ratio * 100 + '%';
+		for (let item of this.children) {
+			item.style.width = 100 / this.options.slidesVisible / ratio +"%";
+		}
+		// this.children.forEach(
+		// 	item => (item.style.width = 100 / this.options.slidesVisible / ratio),
+		// );
 	}
 }
-
-document.addEventListener('DOMContentLoaded', async event => {
-	let carousel = document.getElementById('bestAllMovies');
-	new Carousel(carousel, {
-		slideToScroll: 1,
-		slidesVisible: 4,
-	});
-});
