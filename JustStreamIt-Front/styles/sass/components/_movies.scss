@@ -25,57 +25,12 @@
 		font-size: 2.2rem;
 		margin-bottom: 20px;
 	}
-	.bestMovie-item {
-		.bestMovie-img {
+	.movie-item {
+		.movie-img {
 			transition: 0.15s;
 			cursor: pointer;
 			&:hover {
 				transform: scale(1.1);
-			}
-		}
-		.modal {
-			display: none;
-			position: fixed;
-			z-index: 3;
-			padding-top: 100px;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			background-color: rgb(0, 0, 0);
-			background-color: rgba(0, 0, 0, 0.4);
-		}
-		.modal-content {
-			display: flex;
-			background: linear-gradient(black, $black);
-			margin: auto;
-			padding: 20px;
-			border-radius: 10px;
-			width: 80%;
-			height: 500px;
-			position: relative;
-			.modal-img {
-				img {
-					height: 100%;
-				}
-			}
-			.modal-infos {
-				padding: 20px;
-				.modal-legende {
-					color: $grey;
-				}
-			}
-			.close {
-				cursor: pointer;
-				position: absolute;
-				right: 20px;
-				top: 20px;
-				transition: 0.15s;
-				font-size: 1.5rem;
-				&:hover {
-					transform: scale(1.1);
-				}
 			}
 		}
 	}

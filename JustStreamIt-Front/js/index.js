@@ -10,9 +10,7 @@ const bestAllContainer = document.getElementById('bestAllMovies');
 // const adventure Movies
 const adventureUrl =
 	'http://localhost:8000/api/v1/titles/?imdb_score_min=8.8&genre=Adventure';
-const adventureContainer = document.getElementById(
-	'categoryAdventure',
-);
+const adventureContainer = document.getElementById('categoryAdventure');
 
 // const fantasy Movies
 const fantasyUrl =
@@ -29,3 +27,5 @@ ComponentCategoryMovies.componentMovies(bestAllMoviesUrl, bestAllContainer);
 ComponentCategoryMovies.componentMovies(adventureUrl, adventureContainer);
 ComponentCategoryMovies.componentMovies(fantasyUrl, fantasyContainer);
 ComponentCategoryMovies.componentMovies(misteryUrl, misteryContainer);
+
+new Modal();

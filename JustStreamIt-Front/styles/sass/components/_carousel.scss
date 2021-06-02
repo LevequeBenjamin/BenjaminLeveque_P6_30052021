@@ -1,0 +1,11 @@
+.carousel1 {
+	position: relative;
+	.carousel-container::after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+	.carousel-item {
+		float: left;
+	}
+}

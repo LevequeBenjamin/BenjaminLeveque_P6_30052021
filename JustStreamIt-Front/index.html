@@ -22,6 +22,15 @@
 		/>
 		<!-- BALISES STYLE -->
 		<link rel="stylesheet" href="styles/styles.css" />
+		<!-- JS -->
+		<script defer src="js/utils/utils.js"></script>
+		<script defer src="js/fetchApi/fetchMovies.js"></script>
+		<script defer src="js/models/movies.js"></script>
+		<script defer src="js/components/showMovies/showMovies.js"></script>
+		<script defer src="js/components/components.js"></script>
+		<script defer src="js/components/carousel/carousel.js"></script>
+		<script defer src="js/components/modal/modal.js"></script>
+		<script defer src="js/index.js"></script>
 		<!-- TITLE -->
 		<title>JustStreamIt</title>
 	</head>
@@ -40,7 +49,7 @@
 		<main>
 			<section>
 				<div class="bestMovieContainer categoryContainer">
-					<div id="bestMovie"></div>
+					<div id="bestMovie" class="wrap"></div>
 					<div id="btn-modal" class="button-info">
 						<i class="fas fa-info-circle"></i>
 						<p>Plus d'infos</p>
@@ -48,19 +57,24 @@
 				</div>
 				<div class="bestAllMoviesContainer categoryContainer">
 					<h2>Les plus gros succès sur JustStreamIt</h2>
-					<div id="bestAllMovies" class="wrap"></div>
+					<div class="carousel1">
+						<div id="bestAllMovies" class="wrap carousel-container1"></div>
+					</div>
 				</div>
 				<div class="categoryAdventureContainer categoryContainer">
 					<h2>Films d'aventure</h2>
-					<div id="categoryAdventure" class="wrap"></div>
+					<div class="carousel"></div>
+					<div id="categoryAdventure" class="wrap carousel-container"></div>
 				</div>
 				<div class="categoryFantasyContainer categoryContainer">
 					<h2>Films fantaisies</h2>
-					<div id="categoryFantasy" class="wrap"></div>
+					<div class="carousel"></div>
+					<div id="categoryFantasy" class="wrap carousel-container"></div>
 				</div>
 				<div class="categoryMisteryContainer categoryContainer">
 					<h2>Films mistères</h2>
-					<div id="categoryMistery" class="wrap"></div>
+					<div class="carousel"></div>
+					<div id="categoryMistery" class="wrap carousel-container"></div>
 				</div>
 			</section>
 		</main>
@@ -108,11 +122,4 @@
 			</nav>
 		</footer>
 	</body>
-	<!-- JS -->
-	<script src="js/fetchApi/fetchMovies.js"></script>
-	<script src="js/fetchApi/fetchOneMovie.js"></script>
-	<script src="js/models/movies.js"></script>
-	<script src="js/showMovies/showMovies.js"></script>
-	<script src="js/components/components.js"></script>
-	<script src="js/index.js"></script>
 </html>

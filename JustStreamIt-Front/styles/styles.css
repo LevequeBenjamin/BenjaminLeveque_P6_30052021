@@ -21,7 +21,7 @@ body {
   font-family: "font-2", serif;
 }
 body main {
-  margin: 100px auto auto auto;
+  margin: 180px auto auto auto;
   max-width: 1190px;
 }
 
@@ -85,54 +85,11 @@ body main {
   font-size: 2.2rem;
   margin-bottom: 20px;
 }
-.categoryContainer .bestMovie-item .bestMovie-img {
+.categoryContainer .movie-item .movie-img {
   transition: 0.15s;
   cursor: pointer;
 }
-.categoryContainer .bestMovie-item .bestMovie-img:hover {
-  transform: scale(1.1);
-}
-.categoryContainer .bestMovie-item .modal {
-  display: none;
-  position: fixed;
-  z-index: 3;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.categoryContainer .bestMovie-item .modal-content {
-  display: flex;
-  background: linear-gradient(black, #191919);
-  margin: auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  height: 500px;
-  position: relative;
-}
-.categoryContainer .bestMovie-item .modal-content .modal-img img {
-  height: 100%;
-}
-.categoryContainer .bestMovie-item .modal-content .modal-infos {
-  padding: 20px;
-}
-.categoryContainer .bestMovie-item .modal-content .modal-infos .modal-legende {
-  color: #8599a5;
-}
-.categoryContainer .bestMovie-item .modal-content .close {
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  transition: 0.15s;
-  font-size: 1.5rem;
-}
-.categoryContainer .bestMovie-item .modal-content .close:hover {
+.categoryContainer .movie-item .movie-img:hover {
   transform: scale(1.1);
 }
 .categoryContainer .wrap {
@@ -185,6 +142,65 @@ body main {
 }
 .footer .footer-container .mentions-legales :hover {
   color: #fdfdfd;
+}
+
+.carousel1 {
+  position: relative;
+}
+.carousel1 .carousel-container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.carousel1 .carousel-item {
+  float: left;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  display: flex;
+  background: linear-gradient(black, #191919);
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  height: 500px;
+  position: relative;
+}
+.modal-content .modal-img-container img {
+  height: 100%;
+}
+.modal-content .modal-infos {
+  padding: 20px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.modal-content .modal-infos .modal-legende {
+  color: #8599a5;
+}
+.modal-content .close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: 0.15s;
+  font-size: 1.5rem;
+}
+.modal-content .close:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=styles.css.map */
