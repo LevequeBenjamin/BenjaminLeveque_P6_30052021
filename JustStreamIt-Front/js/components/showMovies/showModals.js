@@ -14,7 +14,7 @@
  * 		static showMovie:
  * 			This method is used to dynamically insert content into a page.
  */
-class ShowMovies {
+class ShowModals {
 	/**
 	 *
 	 * This method is used to dynamically insert content into a page.
@@ -22,30 +22,11 @@ class ShowMovies {
 	 * @param {HTMLElement} container
 	 * @param {Array} moviesArr contains a Movie instance array
 	 */
-	static showMovies = (container, moviesArr) => {
+	static showModals = (container, moviesArr) => {
 		container.innerHTML = moviesArr
 			.map(
 				movie => `
-            <div class="movie-item carousel-item ${movie.movie_id}">
-              <img class="movie-img" src="${movie.image_url}" />
-            </div>  
-            `,
-			)
-			.join(' ');
-	};
-
-	/**
-	 *
-	 * This method is used to dynamically insert content into a page.
-	 *
-	 * @param {HTMLElement} container
-	 * @param {Object} movie an instance of Movie
-	 */
-	static showMovie = (container, movie) => {
-		container.innerHTML = `
-        <div class="movie-item">
-          <img class="movie-img" src="${movie.image_url}" />
-          <div class="modal">
+              <div class="modal ${movie.movie_id}">
                 <div class="modal-content">
                     <div class="modal-img-container">
                       <img class="modal-img" src="${movie.image_url}" />
@@ -64,8 +45,9 @@ class ShowMovies {
                     </div>
                     <span class="far fa-times-circle close"></span>
                 </div>
-              </div>
-        </div>
-        `;
+              </div> 
+            `,
+			)
+			.join(' ');
 	};
 }

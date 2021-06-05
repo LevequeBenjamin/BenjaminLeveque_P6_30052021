@@ -50,7 +50,7 @@ class ComponentCategoryMovies {
 	 * @param {string} url the url of movies category.
 	 * @param {HTMLElement} container
 	 */
-	static componentMovies = async (url, container) => {
+	static componentMovies = async (url, container, modalContainer) => {
 		let moviesArr = new Array();
 		let moviesFound = new FetchMovies(url);
 		await moviesFound.getAllMovies();
@@ -63,7 +63,8 @@ class ComponentCategoryMovies {
 		}
 
 		ShowMovies.showMovies(container, moviesArr);
-		//let carousel = document.getElementById(container);
+		ShowModals.showModals(modalContainer, moviesArr);
+
 		new Carousel(container, {
 			slideToScroll: 1,
 			slidesVisible: 4,
