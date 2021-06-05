@@ -67,7 +67,7 @@ class ComponentCategoryMovies {
 		new Carousel(container, {
 			slideToScroll: 1,
 			slidesVisible: 4,
+			loop: false,
 		});
-	
 	};
 }

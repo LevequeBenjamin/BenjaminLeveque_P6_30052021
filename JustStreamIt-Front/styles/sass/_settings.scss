@@ -21,6 +21,10 @@ body {
 	font-family: $font-2;
 		main{
 			margin: 180px auto auto auto;
-			max-width: 1190px;
+			max-width: 1440px;
+			overflow: hidden;
+			section{
+				margin: 0 40px 0 40px;
+			}
 		}
 }

@@ -1,11 +1,31 @@
-.carousel1 {
-	position: relative;
-	.carousel-container::after {
-		content: '';
-		clear: both;
-		display: table;
+.carousel {
+	.carousel-container {
+		transition: transform 0.3s;
 	}
-	.carousel-item {
-		float: left;
+	.carousel-next {
+		font-size: 4rem;
+		position: absolute;
+		right: -30px;
+		top: 50%;
+		i {
+			transition: 0.3s;
+			cursor: pointer;
+			&:hover {
+				transform: scale(1.5);
+			}
+		}
+	}
+	.carousel-prev {
+		font-size: 4rem;
+		position: absolute;
+		left: -30px;
+		top: 50%;
+		i {
+			transition: 0.3s;
+			cursor: pointer;
+			&:hover {
+				transform: scale(1.5);
+			}
+		}
 	}
 }

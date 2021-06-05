@@ -22,7 +22,11 @@ body {
 }
 body main {
   margin: 180px auto auto auto;
-  max-width: 1190px;
+  max-width: 1440px;
+  overflow: hidden;
+}
+body main section {
+  margin: 0 40px 0 40px;
 }
 
 /* ********** base/_base.scss ********** */
@@ -48,7 +52,7 @@ body main {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1190px;
+  max-width: 1440px;
   margin: 0 auto;
   align-items: center;
   font-size: 0.8rem;
@@ -84,6 +88,9 @@ body main {
 .categoryContainer h2 {
   font-size: 2.2rem;
   margin-bottom: 20px;
+}
+.categoryContainer .movie-item {
+  margin: 0 1.7%;
 }
 .categoryContainer .movie-item .movie-img {
   width: 100%;
@@ -145,22 +152,40 @@ body main {
   color: #fdfdfd;
 }
 
-.carousel1 {
-  position: relative;
+.carousel .carousel-container {
+  transition: transform 0.3s;
 }
-.carousel1 .carousel-container::after {
-  content: "";
-  clear: both;
-  display: table;
+.carousel .carousel-next {
+  font-size: 4rem;
+  position: absolute;
+  right: -30px;
+  top: 50%;
 }
-.carousel1 .carousel-item {
-  float: left;
+.carousel .carousel-next i {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.carousel .carousel-next i:hover {
+  transform: scale(1.5);
+}
+.carousel .carousel-prev {
+  font-size: 4rem;
+  position: absolute;
+  left: -30px;
+  top: 50%;
+}
+.carousel .carousel-prev i {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.carousel .carousel-prev i:hover {
+  transform: scale(1.5);
 }
 
 .modal {
   display: none;
   position: fixed;
-  z-index: 3;
+  z-index: 20;
   padding-top: 100px;
   left: 0;
   top: 0;

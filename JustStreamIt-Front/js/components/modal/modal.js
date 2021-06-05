@@ -22,6 +22,8 @@ class Modal {
 		e.preventDefault();
 		let target = e.target.nextSibling.nextSibling;
 		if (target === null) return;
+		//let targetParent = target.parentElement.parentElement;
+		//targetParent.style.transform = '';
 		target.style.display = 'block';
 		this.modal = target;
 		this.modal.addEventListener('click', this.closeModal);

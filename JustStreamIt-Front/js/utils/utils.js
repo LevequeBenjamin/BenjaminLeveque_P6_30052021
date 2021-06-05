@@ -9,4 +9,10 @@ class Utils {
 		div.setAttribute('class', className);
 		return div;
 	}
+
+	static createIWithClass(className) {
+		let i = document.createElement('i');
+		i.setAttribute('class', className);
+		return i;
+	}
 }
