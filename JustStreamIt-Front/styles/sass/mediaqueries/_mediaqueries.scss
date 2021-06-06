@@ -1,0 +1,81 @@
+@media screen and(max-width: 1024px) {
+	.movie-container {
+		.movie-description {
+			h2 {
+				font-size: 2.4rem !important;
+			}
+			h3 {
+				.modal-legende {
+					color: $grey;
+				}
+				line-height: 2rem !important;
+				font-size: 2rem !important;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 874px) {
+	.movie-container {
+		.movie-description {
+			h2 {
+				font-size: 2rem !important;
+			}
+			h3 {
+				.modal-legende {
+					color: $grey;
+				}
+				line-height: 1.5rem !important;
+				font-size: 1.4rem !important;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 710px) {
+	.movie-container {
+		.movie-description {
+			.movie-description-display {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and(max-width: 610px) {
+	section {
+		margin: 0 10px 0 10px !important;
+	}
+	h1 {
+		font-size: 3rem !important;
+	}
+	.movie-container {
+		padding: 0 !important;
+		.movie-description {
+			h3 {
+				display: none;
+			}
+		}
+	}
+	.button-info {
+		width: 160px !important;
+
+		bottom: 0 !important;
+	}
+	.carousel-next {
+		right: -7px !important;
+	}
+	.carousel-prev {
+		left: -7px !important;
+	}
+}
+
+@media screen and(max-width: 425px) {
+	.movie-container {
+		.movie-description {
+			h2 {
+				font-size: 1.8rem !important;
+			}
+		}
+	}
+}

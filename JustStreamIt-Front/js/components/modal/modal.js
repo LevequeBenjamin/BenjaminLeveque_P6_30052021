@@ -11,7 +11,28 @@ class Modal {
 	 */
 	constructor() {
 		this.container();
+		this.btnModal();
 	}
+
+	/**
+	 *
+	 * @param {*} e
+	 * @returns
+	 */
+	openBestModal = e => {
+		e.preventDefault();
+		let target = e.target;
+		if (target === null) return;
+		
+		let modalBestMovie = document.getElementById("bestMovie").childNodes[1].childNodes[3]
+		this.modalBestMovie = modalBestMovie
+
+		modalBestMovie.style.display = 'block';
+		this.modalBestMovie = modalBestMovie
+		this.modalBestMovie.addEventListener('click', this.closeBestMovieModal);
+			
+	
+	};
 
 	/**
 	 *
@@ -39,9 +60,27 @@ class Modal {
 	 *
 	 * @param {*} e
 	 */
+	 closeBestMovieModal = e => {
+		e.preventDefault();
+		this.modalBestMovie.style.display = 'none';
+	};
+
+	/**
+	 *
+	 * @param {*} e
+	 */
 	closeModal = e => {
 		e.preventDefault();
 		this.modal.style.display = 'none';
+	};
+
+	/**
+	 *
+	 */
+	btnModal = () => {
+		document
+			.getElementById('btn-modal')
+			.addEventListener('click', this.openBestModal);
 	};
 
 	/**
