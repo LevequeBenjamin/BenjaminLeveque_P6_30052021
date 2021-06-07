@@ -1,10 +1,10 @@
-/* ********** base/_base.scss ********** */
+/* ********** Contains the font ********** */
 
-@font-face {
-  font-family: "font-1";
-  src: url("./assets/fonts/SF_Cartoonist_Hand.ttf");
+@font-face { // Font-1.
+	font-family: 'font-1';
+	src: url('./assets/fonts/SF_Cartoonist_Hand.ttf');
 }
-@font-face {
-  font-family: "font-2";
-  src: url("./assets/fonts/SF_Cartoonist_Hand_Bold.ttf");
+@font-face { // Font-2.
+	font-family: 'font-2';
+	src: url('./assets/fonts/SF_Cartoonist_Hand_Bold.ttf');
 }

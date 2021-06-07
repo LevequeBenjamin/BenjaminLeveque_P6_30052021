@@ -1,4 +1,6 @@
-@media screen and(max-width: 1024px) {
+/* ********** Contains the mediaqueries of movies ********** */
+
+@media screen and(max-width: 1024px) { // 1024px max
 	.movie-container {
 		.movie-description {
 			h2 {
@@ -15,7 +17,7 @@
 	}
 }
 
-@media screen and(max-width: 874px) {
+@media screen and(max-width: 874px) { // 874px max
 	.movie-container {
 		.movie-description {
 			h2 {
@@ -32,7 +34,7 @@
 	}
 }
 
-@media screen and(max-width: 710px) {
+@media screen and(max-width: 710px) { // 710px max
 	.movie-container {
 		.movie-description {
 			.movie-description-display {
@@ -42,7 +44,7 @@
 	}
 }
 
-@media screen and(max-width: 610px) {
+@media screen and(max-width: 610px) { // 610px max
 	section {
 		margin: 0 10px 0 10px !important;
 	}
@@ -70,7 +72,7 @@
 	}
 }
 
-@media screen and(max-width: 425px) {
+@media screen and(max-width: 425px) { // 425px max
 	.movie-container {
 		.movie-description {
 			h2 {

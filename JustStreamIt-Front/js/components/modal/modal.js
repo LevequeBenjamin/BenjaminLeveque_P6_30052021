@@ -1,13 +1,19 @@
 /**
- *
+ * Contains the class Modal.
  */
 
 /**
- *
+ * Class representating a modal.
+ * @method openBestModal(e) Allows you to switch the display style of the target bestModal to 'block'.
+ * @method openModal(e) Allows you to switch the display style of the target modal to 'block'.
+ * @method closeBestMovieModal(e) Allows you to switch the display style of the target bestModal to 'none'.
+ * @method closeModal(e) Allows you to switch the display style of the target modal to 'none'.
+ * @method btnModal() Listen to the modal btn HTMLElement and launch the openBestModal method.
+ * @method container() Listen to the modal btn HTMLElement and launch the openModal method.
  */
 class Modal {
 	/**
-	 *
+	 * Create a modal.
 	 */
 	constructor() {
 		this.container();
@@ -15,29 +21,26 @@ class Modal {
 	}
 
 	/**
-	 *
-	 * @param {*} e
-	 * @returns
+	 *	Allows you to switch the display style of the target bestModal to 'block'.
+	 * @param {HTMLElement} e The target modal.
 	 */
 	openBestModal = e => {
 		e.preventDefault();
 		let target = e.target;
 		if (target === null) return;
-		
-		let modalBestMovie = document.getElementById("bestMovie").childNodes[1].childNodes[3]
-		this.modalBestMovie = modalBestMovie
+
+		let modalBestMovie =
+			document.getElementById('bestMovie').childNodes[1].childNodes[3];
+		this.modalBestMovie = modalBestMovie;
 
 		modalBestMovie.style.display = 'block';
-		this.modalBestMovie = modalBestMovie
+		this.modalBestMovie = modalBestMovie;
 		this.modalBestMovie.addEventListener('click', this.closeBestMovieModal);
-			
-	
 	};
 
 	/**
-	 *
-	 * @param {*} e
-	 * @returns
+	 * Allows you to switch the display style of the target modal to 'block'.
+	 * @param {HTMLElement} e The target modal.
 	 */
 	openModal = e => {
 		e.preventDefault();
@@ -57,17 +60,17 @@ class Modal {
 	};
 
 	/**
-	 *
-	 * @param {*} e
+	 * Allows you to switch the display style of the target bestModal to 'none'.
+	 * @param {HTMLElement} e The target modal.
 	 */
-	 closeBestMovieModal = e => {
+	closeBestMovieModal = e => {
 		e.preventDefault();
 		this.modalBestMovie.style.display = 'none';
 	};
 
 	/**
-	 *
-	 * @param {*} e
+	 * Allows you to switch the display style of the target modal to 'none'.
+	 * @param {HTMLElement} e The target modal.
 	 */
 	closeModal = e => {
 		e.preventDefault();
@@ -75,7 +78,7 @@ class Modal {
 	};
 
 	/**
-	 *
+	 * Listen to the modal btn HTMLElement and launch the openBestModal method.
 	 */
 	btnModal = () => {
 		document
@@ -84,7 +87,7 @@ class Modal {
 	};
 
 	/**
-	 *
+	 * Listen to the modal btn HTMLElement and launch the openModal method.
 	 */
 	container = () => {
 		document.querySelectorAll('.categoryContainer .wrap').forEach(container => {

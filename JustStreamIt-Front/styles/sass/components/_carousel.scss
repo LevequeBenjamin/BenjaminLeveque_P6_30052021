@@ -1,31 +1,15 @@
+/* ********** Contains the styles of carousels ********** */
+
 .carousel {
 	.carousel-container {
 		transition: transform 0.3s;
 	}
-	.carousel-next {
-		font-size: 4rem;
-		position: absolute;
+	.carousel-next { // btn next.
+		@include btn-carousel;
 		right: -30px;
-		top: 50%;
-		i {
-			transition: 0.3s;
-			cursor: pointer;
-			&:hover {
-				transform: scale(1.5);
-			}
-		}
 	}
-	.carousel-prev {
-		font-size: 4rem;
-		position: absolute;
+	.carousel-prev { // btn prev.
+		@include btn-carousel;
 		left: -30px;
-		top: 50%;
-		i {
-			transition: 0.3s;
-			cursor: pointer;
-			&:hover {
-				transform: scale(1.5);
-			}
-		}
 	}
 }

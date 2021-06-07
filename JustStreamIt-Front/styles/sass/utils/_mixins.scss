@@ -1,5 +1,20 @@
-@mixin center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ********** Contains the mixins ********** */
+
+@mixin center { // Allows to center an element.
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin btn-carousel { // General styles of a carousel arrow.
+	font-size: 4rem;
+	position: absolute;
+	top: 50%;
+	i {
+		transition: 0.3s;
+		cursor: pointer;
+		&:hover {
+			transform: scale(1.5);
+		}
+	}
 }

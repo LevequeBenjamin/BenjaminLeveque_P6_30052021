@@ -1,6 +1,6 @@
-/* ********** layout/_general.scss ********** */
+/* ********** Contains the settings ********** */
 
-* {
+* { // General.
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -13,17 +13,17 @@
 		background: $red;
 	}
 }
-body {
+body { // Body.
 	background-color: $black;
 	line-height: 1.4rem;
 	color: $white;
 	position: relative;
 	font-family: $font-2;
-		main{
+		main{ // Main.
 			margin: 180px auto auto auto;
 			max-width: 1440px;
 			overflow: hidden;
-			section{
+			section{ // Section.
 				margin: 0 40px 0 40px;
 			}
 		}

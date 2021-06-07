@@ -1,9 +1,7 @@
 @import 'utils/variables';
-@import 'utils/keyframes';
 @import 'utils/mixins';
 @import 'settings';
 @import 'base/font';
-@import 'layout/main';
 @import 'components/navbar';
 @import 'components/movies';
 @import 'components/footer';
@@ -11,5 +9,3 @@
 @import 'components/modal';
 @import 'mediaqueries/mediaqueries';
 @import 'mediaqueries/modalMediaqueries';
-@import 'pages/index.scss';
-

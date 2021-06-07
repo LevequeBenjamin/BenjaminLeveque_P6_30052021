@@ -1,19 +1,26 @@
+/**
+ * Contains the class movie and movieConstructor.
+ */
+
+/**
+ * Class representating a movie.
+ */
 class Movie {
 	/**
-	 *
-	 * @param {*} movie_id
-	 * @param {*} image_url
-	 * @param {*} title
-	 * @param {*} genres
-	 * @param {*} date_published
-	 * @param {*} rated
-	 * @param {*} imdb_score
-	 * @param {*} directors
-	 * @param {*} actors
-	 * @param {*} duration
-	 * @param {*} countries
-	 * @param {*} reviews_from_critics
-	 * @param {*} description
+	 * Create a movie.
+	 * @param {number} movie_id
+	 * @param {string} image_url
+	 * @param {string} title
+	 * @param {Array} genres
+	 * @param {string} date_published
+	 * @param {number} rated
+	 * @param {number} imdb_score
+	 * @param {Array} directors
+	 * @param {Array} actors
+	 * @param {number} duration
+	 * @param {string} countries
+	 * @param {number} reviews_from_critics
+	 * @param {string} description
 	 */
 	constructor(
 		movie_id,
@@ -46,11 +53,16 @@ class Movie {
 	}
 }
 
+/**
+ * Class representating a movieConstructor.
+ * @method movieConstructor(movieFound) Allowing to build an instance movie.
+ */
 class MovieConstructor {
 	/**
-	 *
-	 * @param {*} movieFound
-	 * @returns
+	 * Create a MovieConstructor.
+	 * @param {Promise} movieFound Promise object represents a movie.
+	 * @returns {Object} movie An instance of movie.
+	 * @static
 	 */
 	static movieConstructor(movieFound) {
 		let movie = new Movie(

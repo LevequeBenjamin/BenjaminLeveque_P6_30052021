@@ -1,26 +1,18 @@
 /**
- * showMovies.js
- *
- * Objects:
- * 		class ShowMovies.
+ * Contains the class ShowMovies.
  */
 
 /**
- * ShowMovies.
- *
- * Methods:
- * 		static showMovies:
- * 			This method is used to dynamically insert content into a page.
- * 		static showMovie:
- * 			This method is used to dynamically insert content into a page.
+ * Class representating a HTMLElement of movies.
+ * @method showMovies(container,moviesArr) This method is used to dynamically insert content into a page.
+ * @method showMovie(container,movie) This method is used to dynamically insert content into a page.
  */
 class ShowMovies {
 	/**
-	 *
 	 * This method is used to dynamically insert content into a page.
-	 *
 	 * @param {HTMLElement} container
-	 * @param {Array} moviesArr contains a Movie instance array
+	 * @param {Array} moviesArr Contains a Movie instance array.
+	 * @static
 	 */
 	static showMovies = (container, moviesArr) => {
 		container.innerHTML = moviesArr
@@ -35,11 +27,10 @@ class ShowMovies {
 	};
 
 	/**
-	 *
 	 * This method is used to dynamically insert content into a page.
-	 *
 	 * @param {HTMLElement} container
-	 * @param {Object} movie an instance of Movie
+	 * @param {Object} movie An instance of Movie.
+	 * @static
 	 */
 	static showMovie = (container, movie) => {
 		container.innerHTML = `

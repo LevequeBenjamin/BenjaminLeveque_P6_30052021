@@ -1,26 +1,17 @@
 /**
- * showMovies.js
- *
- * Objects:
- * 		class ShowMovies.
+ * Contains the class ShowModals.
  */
 
 /**
- * ShowMovies.
- *
- * Methods:
- * 		static showMovies:
- * 			This method is used to dynamically insert content into a page.
- * 		static showMovie:
- * 			This method is used to dynamically insert content into a page.
+ * Class representating a HTMLElement of modal.
+ * @method showModals(container,movieArr) This method is used to dynamically insert content into a page.
  */
 class ShowModals {
 	/**
-	 *
 	 * This method is used to dynamically insert content into a page.
-	 *
 	 * @param {HTMLElement} container
-	 * @param {Array} moviesArr contains a Movie instance array
+	 * @param {Array} moviesArr Contains a Movie instance array.
+	 * @static
 	 */
 	static showModals = (container, moviesArr) => {
 		container.innerHTML = moviesArr

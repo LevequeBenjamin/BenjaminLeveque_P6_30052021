@@ -1,15 +1,25 @@
 /**
- *
+ * Contains the class carousel.
  */
 
 /**
- *
+ * Class representating a carousel.
+ * @method setStyle() Apply the correct dimensions to the elements of the carousel.
+ * @method next() Allows you to go to the next item.
+ * @method prev() Allows you to go to the prev item.
+ * @method gotoItem(index) Move the carousel to the target element.
+ * @method onWindowRecize() Allows you to manage the responsive.
+ * @method createNavigation() Allows you to create the next and prev button.
  */
 class Carousel {
 	/**
+	 * Create a Carousel.
+	 * @param {HTMLElement} element
+	 * @param {Object} options
+	 * @param {Object} [options.slideToScroll=1] Number of elements to scroll.
+	 * @param {Object} [options.slidesVisible=1] Number of elements visible in a slide.
+	 * @param {Object} [options.loop=False] Must we loop at the end of the carousel.
 	 *
-	 * @param {*} element
-	 * @param {*} options
 	 */
 	constructor(element, options = {}) {
 		this.element = element;
@@ -45,7 +55,7 @@ class Carousel {
 	}
 
 	/**
-	 *
+	 * Apply the correct dimensions to the elements of the carousel.
 	 */
 	setStyle() {
 		let ratio = this.items.length / this.slidesVisible;
@@ -56,22 +66,22 @@ class Carousel {
 	}
 
 	/**
-	 *
+	 * Allows you to go to the next item.
 	 */
 	next() {
 		this.gotoItem(this.currentItem + this.slideToScroll);
 	}
 
 	/**
-	 *
+	 * Allows you to go to the prev item.
 	 */
 	prev() {
 		this.gotoItem(this.currentItem - this.slideToScroll);
 	}
 
 	/**
-	 *
-	 * @param {*} index
+	 * Move the carousel to the target element.
+	 * @param {number} index Target element.
 	 * @returns
 	 */
 	gotoItem(index) {
@@ -98,7 +108,7 @@ class Carousel {
 	}
 
 	/**
-	 *
+	 * Allows you to manage the responsive.
 	 */
 	onWindowRecize() {
 		let mobile = window.innerWidth < 600;
@@ -109,7 +119,7 @@ class Carousel {
 	}
 
 	/**
-	 *
+	 * Allows you to create the next and prev button.
 	 */
 	createNavigation() {
 		let nextButton = Utils.createDivWithClass('carousel-next');
@@ -128,6 +138,7 @@ class Carousel {
 
 	/**
 	 * getter
+	 * @returns {number} Number of elements to scroll.
 	 */
 	get slideToScroll() {
 		return this.isMobile ? 1 : this.options.slideToScroll;
@@ -135,6 +146,7 @@ class Carousel {
 
 	/**
 	 * getter
+	 * @returns {number} Number of elements visible in a slide.
 	 */
 	get slidesVisible() {
 		return this.isMobile ? 1 : this.options.slidesVisible;

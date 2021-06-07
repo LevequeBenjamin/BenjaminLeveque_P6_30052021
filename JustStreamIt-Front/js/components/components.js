@@ -1,18 +1,10 @@
 /**
- * component.js
- *
- * Objects:
- * 		class ComponentBestMovie.
- * 		class ComponentCategoryMovies.
- *
+ * Contains the class ComponentBestMovie and ComponentCategoryMovies.
  */
 
 /**
- *	ComponentBestMovie.
- *
- *	Methods:
- *		static componentMovie:
- *			This method is the controller for creating a component best movie.
+ * Class reprentating a ComponentBestMovie.
+ * @method componentMovie(url,container) This method is the controller for creating a component best movie.
  */
 class ComponentBestMovie {
 	/**
@@ -20,8 +12,9 @@ class ComponentBestMovie {
 	 *  The movie information is retrieved with the Fetchmovies and FetchOneMovie objects,
 	 *  a Movie object is constructed and passed as an argument of the Shomovies static
 	 *  method to create the component in HTML.
-	 * @param {string} url the url of the bests moovies
+	 * @param {string} url The url of the bests moovies.
 	 * @param {HTMLElement} container
+	 * @static
 	 */
 	static componentMovie = async (url, container) => {
 		let movieFound = new FetchMovies(url);
@@ -34,11 +27,8 @@ class ComponentBestMovie {
 }
 
 /**
- *	ComponentCategoryMovies.
- *
- *	Methods:
- *		static componentMovies:
- *			This method is the controller for creating a component category.
+ * Class representating a ComponentCategoryMovies.
+ * @method componentMovies(url,container,modalContainer) This method is the controller for creating a component category.
  */
 class ComponentCategoryMovies {
 	/**
@@ -47,8 +37,9 @@ class ComponentCategoryMovies {
 	 *  a Movie object is constructed and passed as an argument of the Shomovies static
 	 *  method to create the component in HTML.
 	 *
-	 * @param {string} url the url of movies category.
+	 * @param {string} url The url of movies category.
 	 * @param {HTMLElement} container
+	 * @static
 	 */
 	static componentMovies = async (url, container, modalContainer) => {
 		let moviesArr = new Array();

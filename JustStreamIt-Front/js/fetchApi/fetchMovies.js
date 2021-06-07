@@ -1,26 +1,18 @@
 /**
- * fetchMovies.js
- *
- * Objects:
- * 		class FetchMovies
+ * Contains the class fetchMovies.
  */
 
 /**
- * FetchMovies
- *
- * Methods:
- * 	fetchAllMovies:
- * 			The fetch() method returns a promise (an object of type Promise)
- *  	which will resolve with a Response object
- * 	getBestMovie:
- * 			This method returns the best movie of all best movies.
- * 	getAllMovies:
- * 			This method returns the 7 best films of a category.
+ * Classe reprentating a FetchMovies.
+ * @method fetchAllMovies(url) The fetch() method returns a promise (an object of type Promise)
+ * which will resolve with a Response object
+ * @method getBestMovie() This method returns the best movie of all best movies.
+ * @method getAllMovies() This method returns the 7 best films of a category.
+ * @method getMovie() This method this calls the fetchmovies method.
  */
 class FetchMovies {
 	/**
-	 *	Constructor.
-	 *
+	 *	Create a FetchMovies.
 	 * @param {string} url the url of movies category or best movies.
 	 */
 	constructor(url) {
@@ -30,10 +22,8 @@ class FetchMovies {
 	}
 
 	/**
-	 *
 	 * The fetch() method returns a promise (an object of type Promise)
 	 *  which will resolve with a Response object.
-	 *
 	 * @param {string} url
 	 */
 	fetchMovies = async url => {

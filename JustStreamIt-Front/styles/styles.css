@@ -1,5 +1,6 @@
-/* ********** utils/_variables.scss ********** */
-/* ********** layout/_general.scss ********** */
+/* ********** Contains the variables ********** */
+/* ********** Contains the mixins ********** */
+/* ********** Contains the settings ********** */
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +30,7 @@ body main section {
   margin: 0 40px 0 40px;
 }
 
-/* ********** base/_base.scss ********** */
+/* ********** Contains the font ********** */
 @font-face {
   font-family: "font-1";
   src: url("./assets/fonts/SF_Cartoonist_Hand.ttf");
@@ -38,7 +39,7 @@ body main section {
   font-family: "font-2";
   src: url("./assets/fonts/SF_Cartoonist_Hand_Bold.ttf");
 }
-/* ********** components/_navbar.scss ********** */
+/* ********** Contains the style of the navbar ********** */
 .navbar {
   position: fixed;
   width: 100%;
@@ -64,6 +65,7 @@ body main section {
   color: #dd0000;
 }
 
+/* ********** Contains the styles of movies ********** */
 .categoryContainer,
 .bestMovieContainer {
   margin: 80px 0 80px 0;
@@ -140,6 +142,7 @@ body main section {
   font-size: 1.2rem;
 }
 
+/* ********** Contains the styles of footer ********** */
 .footer {
   width: 100%;
   height: 200px;
@@ -149,8 +152,8 @@ body main section {
 .footer .footer-container {
   max-width: 1440px;
   margin: auto;
-  display: flex;
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -188,14 +191,15 @@ body main section {
   color: #fdfdfd;
 }
 
+/* ********** Contains the styles of carousels ********** */
 .carousel .carousel-container {
   transition: transform 0.3s;
 }
 .carousel .carousel-next {
   font-size: 4rem;
   position: absolute;
-  right: -30px;
   top: 50%;
+  right: -30px;
 }
 .carousel .carousel-next i {
   transition: 0.3s;
@@ -207,8 +211,8 @@ body main section {
 .carousel .carousel-prev {
   font-size: 4rem;
   position: absolute;
-  left: -30px;
   top: 50%;
+  left: -30px;
 }
 .carousel .carousel-prev i {
   transition: 0.3s;
@@ -218,6 +222,7 @@ body main section {
   transform: scale(1.5);
 }
 
+/* ********** Contains the styles of modals ********** */
 .modal {
   display: none;
   position: fixed;
@@ -231,8 +236,7 @@ body main section {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 10;
 }
-
-.modal-content {
+.modal .modal-content {
   display: flex;
   background: linear-gradient(black, #191919);
   margin: auto;
@@ -242,18 +246,18 @@ body main section {
   height: 500px;
   position: relative;
 }
-.modal-content .modal-img-container img {
+.modal .modal-content .modal-img-container img {
   height: 100%;
 }
-.modal-content .modal-infos {
+.modal .modal-content .modal-infos {
   padding: 20px;
   font-size: 1.2rem;
   line-height: 2rem;
 }
-.modal-content .modal-infos .modal-legende {
+.modal .modal-content .modal-infos .modal-legende {
   color: #8599a5;
 }
-.modal-content .close {
+.modal .modal-content .close {
   cursor: pointer;
   position: absolute;
   right: 20px;
@@ -261,10 +265,11 @@ body main section {
   transition: 0.15s;
   font-size: 1.5rem;
 }
-.modal-content .close:hover {
+.modal .modal-content .close:hover {
   transform: scale(1.1);
 }
 
+/* ********** Contains the mediaqueries of movies ********** */
 @media screen and (max-width: 1024px) {
   .movie-container .movie-description h2 {
     font-size: 2.4rem !important;
@@ -328,6 +333,7 @@ body main section {
     font-size: 1.8rem !important;
   }
 }
+/* ********** Contains the mediaqueries of modals ********** */
 @media screen and (max-width: 1024px) {
   .modal-content .modal-infos {
     font-size: 1.2rem;

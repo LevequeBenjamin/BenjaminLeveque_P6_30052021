@@ -1,5 +1,7 @@
+/* ********** Contains the styles of movies ********** */
+
 .categoryContainer,
-.bestMovieContainer {
+.bestMovieContainer { // Category containers.
 	margin: 80px 0 80px 0;
 	position: relative;
 	h2 {
@@ -17,13 +19,12 @@
 			}
 		}
 	}
-
 	.wrap {
 		display: flex;
 	}
 }
 
-.bestMovieContainer {
+.bestMovieContainer { // Best movie.
 	.movie-item {
 		.movie-container {
 			padding: 20px;
@@ -51,7 +52,7 @@
 			}
 		}
 	}
-	.button-info {
+	.button-info { // Button that opens the best movie modal.
 		position: absolute;
 		bottom: 20px;
 		right: 0;
