@@ -19,8 +19,8 @@ class Movie {
 	 * @param {Array} actors
 	 * @param {number} duration
 	 * @param {string} countries
-	 * @param {number} reviews_from_critics
 	 * @param {string} description
+	 * @param {number} reviews_from_critics
 	 */
 	constructor(
 		movie_id,
@@ -34,8 +34,8 @@ class Movie {
 		actors,
 		duration,
 		countries,
-		reviews_from_critics,
 		description,
+		reviews_from_critics = 'Pas de résultats',
 	) {
 		this.movie_id = movie_id;
 		this.image_url = image_url;
@@ -65,21 +65,39 @@ class MovieConstructor {
 	 * @static
 	 */
 	static movieConstructor(movieFound) {
-		let movie = new Movie(
-			movieFound.id,
-			movieFound.image_url,
-			movieFound.title,
-			movieFound.genres,
-			movieFound.date_published,
-			movieFound.rated,
-			movieFound.imdb_score,
-			movieFound.directors,
-			movieFound.actors,
-			movieFound.duration,
-			movieFound.countries,
-			movieFound.reviews_from_critics,
-			movieFound.description,
-		);
+		let movie;
+		if (!movieFound.reviews_from_critics) {
+			movie = new Movie(
+				movieFound.id,
+				movieFound.image_url,
+				movieFound.title,
+				movieFound.genres,
+				movieFound.date_published,
+				movieFound.rated,
+				movieFound.imdb_score,
+				movieFound.directors,
+				movieFound.actors,
+				movieFound.duration,
+				movieFound.countries,
+				movieFound.description,
+			);
+		} else {
+			movie = new Movie(
+				movieFound.id,
+				movieFound.image_url,
+				movieFound.title,
+				movieFound.genres,
+				movieFound.date_published,
+				movieFound.rated,
+				movieFound.imdb_score,
+				movieFound.directors,
+				movieFound.actors,
+				movieFound.duration,
+				movieFound.countries,
+				movieFound.description,
+				movieFound.reviews_from_critics,
+			);
+		}
 		return movie;
 	}
 }

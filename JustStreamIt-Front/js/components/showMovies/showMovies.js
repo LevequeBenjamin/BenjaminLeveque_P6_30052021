@@ -18,7 +18,7 @@ class ShowMovies {
 		container.innerHTML = moviesArr
 			.map(
 				movie => `
-            <div class="movie-item carousel-item ${movie.movie_id}">
+            <div class="movie-item carousel-item">
               <img class="movie-img" src="${movie.image_url}" alt="${movie.title} picture"/>
             </div>  
             `,

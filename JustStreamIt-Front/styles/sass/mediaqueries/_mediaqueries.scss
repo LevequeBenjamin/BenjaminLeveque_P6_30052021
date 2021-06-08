@@ -38,7 +38,7 @@
 	.movie-container {
 		.movie-description {
 			.movie-description-display {
-				display: none;
+				display: none !important;
 			}
 		}
 	}
@@ -55,7 +55,7 @@
 		padding: 0 !important;
 		.movie-description {
 			h3 {
-				display: none;
+				display: none !important;
 			}
 		}
 	}

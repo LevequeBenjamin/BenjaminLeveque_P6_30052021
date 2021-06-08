@@ -11,7 +11,7 @@ class Utils {
 	/**
 	 * Allows you to create an HTMLElement class.
 	 * @param {string} className
-	 * @returns {HTMLElement}
+	 * @returns {HTMLElement} div
 	 * @static
 	 */
 	static createDivWithClass(className) {
@@ -23,7 +23,7 @@ class Utils {
 	/**
 	 * Allows you to create an HTMLElement i.
 	 * @param {string} className
-	 * @returns {HTMLElement}
+	 * @returns {HTMLElement} i
 	 * @static
 	 */
 	static createIWithClass(className) {

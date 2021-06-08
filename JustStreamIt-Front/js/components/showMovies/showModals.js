@@ -17,7 +17,7 @@ class ShowModals {
 		container.innerHTML = moviesArr
 			.map(
 				movie => `
-              <div class="modal ${movie.movie_id}">
+              <div class="modal">
                 <div class="modal-content">
                     <div class="modal-img-container">
                       <img class="modal-img" src="${movie.image_url}" alt="${movie.title} picture"/>
